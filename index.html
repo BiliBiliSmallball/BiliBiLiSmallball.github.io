@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scalr=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://oss.tool.lu/cache/202207/21/154054oxz4c36loffyoj4c.jpg.icon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="./index_s.css" />
+    <title>圆滚滚的小毛的个人网站</title>
+  </head>
+  <body>
+    <ul class="hand">
+      <!--导航栏-->
+      <li><a href="./index.html">主页</a></li>
+      <li><a href="#news">我做过的项目有</a></li>
+      <li><a href="#contact">联系我</a></li>
+      <li><a href="./hearing.html">我的自建论坛</a></li>
+      <li><a href="./WangPang/QiShiYe.html">起始页</a></li>
+    </ul>
+	<!-- 网页歌曲 -->
+	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1923927650&auto=1&height=66"></iframe>点击左侧开启音乐，更香哦
+    <div class="first">
+      <!-- 第一页 -->
+      <div id="handing">
+        <h5 style="align-items: center; color: rgb(0, 0, 255); text-align: center">
+          我真的不知道偷图,找到我就去找百度。
+        </h5>
+        <!-- 首页左侧 -->
+        <img
+          src="./self_photo.jpg"
+          alt="上学记得换！小狐狸！"
+          width="150px"
+          height="150px"
+        /><!--奇怪，为什么到./就可以？-->
+        <h2>你好，我是<br/>圆滚滚的小毛<br/>欢迎来到<br/>我的网页</h2>
+      </div>
+
+      <div style="width: 100%;display:flex;flex-direction: column;">
+        <!-- 首页右侧 -->
+        <div class="first_r_1">
+        <div class="first_r">姓名</div>
+        <div class="first_r">朱正阳<del  style="font: size 10px;">圆滚滚的小毛是艺名拉</del></div>
+        </div>
+        <br />
+        <div class="first_r_1">
+        <div class="first_r">性别：男</div>
+        <div class="first_r">籍贯：南平</div>
+        <div class="first_r">所在地：厦门</div>
+        </div>
+        <br />
+        <div class="first_r_1">
+        <div class="first_r">联系方式</div>
+        <div class="first_r">QQ：1535878824；电话：18059267295</div>
+        </div>
+        <br />
+      </div>
+    </div>
+	<!-- 自我介绍 （待填充）-->
+    <iframe class="self" src="./Bet_On_Me.html">
+
+    </iframe>
+	<!-- 链接 -->
+	<div class="first">
+    <div style="display: flex; justify-content: center">
+      <img
+        src="https://img2.baidu.com/it/u=717584119,2249213618&fm=253&fmt=auto&app=138&f=JPEG?w=455&h=500"
+        alt="你真的有网吗？(￣┰￣*)"
+        width="30px"
+        height="30px"
+      />
+      <button onclick="">我想对你说。。。。</button>------>
+      <a id="blbl" href="https://space.bilibili.com/290423223">我的b站</a>
+    </div>
+    </div>
+    <div class="first" style="background-color:rgb(159, 206, 188);"">
+    <!--联系表单-->
+    <div
+      style="
+        display: flex;
+        padding: 10px 80px;
+        margin: 10px;
+        justify-content: center;
+      "
+    >
+      <h4
+        style="
+          font-size: 30px;
+          margin: 3px;
+          text-align: center;
+          color: aquamarine;
+        "
+      >
+        联系我<br />
+        <div id="thank"></div>
+      </h4>
+      <!-- 修改此表单HTML并将其放置在任何需要的位置-->
+      <form action="https://formspree.io/f/mlezqwgk" method="POST">
+        <label>
+          <p id="farm">您是？</p>
+          <input
+            type="text"
+            name="name"
+            placeholder="您的姓名？"
+            minlength="1"
+          /> </label
+        ><br />
+        <label>
+          <p id="farm">您的邮箱？</p>
+          :
+          <input type="email" name="email" /> </label
+        ><br />
+        <label>
+          <p id="farm">说啥？:</p>
+          :
+          <textarea name="message"></textarea>
+        </label>
+        <label
+          ><br />
+          联系形式:
+          <input type="radio" name="link_function" value="QQ" />QQ
+          <input type="radio" name="link_function" value="email" />e-mail
+          <input type="radio" name="link_function" value="微信" />微信
+          <input type="radio" name="link_function" value="飞书" />飞书
+        </label>
+        <!-- 其他表单字段位于此处 -->
+        <button type="submit" onclick="thank()">发送</button>
+      </form>
+    </div>
+    </div>
+	<!--结束-->
+    <p class="ending">
+      网站备案号:<del>没有的啦</del><br />E-mail:zzy1535878824@163.com
+    </p>
+  </body>
+  <script>
+    let in_name = document.getElementsByName("name");
+    function thank() {
+      document.getElementById("thank").innerHTML =
+        "感谢您的留言!<br>我将于2~3个工作日内以您所选的联系形式回复您";
+    }
+	function going(){
+		window.alert("即将跳转至朱朱墙！请确认！");
+		window.open('./hearing.html','_self')}
+  </script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加载中</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      background: linear-gradient(to bottom, #89f7fe, #66a6f6);
+      /* 线性渐变 - 梯度（自底部，自#89f7fe至#66a6f6*/
+    }
+
+    .wave {
+      width: 200px;
+      height: 200px;
+      background-color: #2797e7;
+      border-radius: 50%;
+      /* 定位 */
+      position: absolute; /* 定位，绝对位置 */
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); /* 变换方式：平移(x轴，y轴）*/
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.2); /* 设置阴影 偏移(x轴，y轴）大小*/
+      overflow: hidden; /* 溢出处理:隐藏 */
+    }
+
+    .wave::before {
+      /* 在，之前 */
+      content: "";
+      width: 300px;
+      height: 300px;
+      background-color: rgba(255, 255, 255, 0.8);
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -65%);
+      border-radius: 40%;
+      /* 导入动画 */
+      animation: wave 5s linear infinite; /* 动画：5s（线性导入）线性 无穷大*/
+    }
+
+    .wave::after {
+      /* 写字 */
+      content: "加载中";
+      /* 定位 */
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, 40px);
+      color: #2797e7;
+    }
+    /* 动画部分 */
+    @keyframes wave {
+      100% {
+        transform: translate(-50%, -65%) rotate(360deg);
+        /* 先定好位置，“rotate(360deg)”旋转 */
+      }
+    }
+  </style>
+  <body>
+    <div class="wave"></div>
+  </body>
+</html>

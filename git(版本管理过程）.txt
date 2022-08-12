@@ -28,9 +28,9 @@ git version : 看git版本
 常见问题:
 git merge 结果是 git merge Already up-to-date. 该怎么解决？
 
-1 .切换到主干   git checkout master
-更新主干代码    git pull origin master
-切换回分支      git checkout feature/20170527_894373_inventory_order_export_1
+1 .切换到主干   git checkout master   (1、先将本地分支切换至需要被合并的分支)
+更新主干代码    git pull origin master(2、拉去被合并的分支最新代码)
+切换回分支      git checkout 分支
 执行合并操作    git merge master
 
 本仓库地址：https://gitee.com/soul-fox/soulfox.com

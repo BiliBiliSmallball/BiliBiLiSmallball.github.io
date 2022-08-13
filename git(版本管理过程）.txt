@@ -7,14 +7,16 @@ git config --global user.email
 
 git version : 看git版本
 克隆仓库：git clone <git地址>
-初始化仓库：git init 
+初始化仓库：git init
 
 添加文件到暂存区：git add -A
 把暂存区的文件提交到仓库：git commit -m "提交信息"(tag自动版本)
 查看提交的历史记录：git log --stat
 
+
 工作区回滚：git checkout <filename>
 撤销最后一次提交：git reset HEAD^1
+
 
 以当前分支为基础新建分支：git checkout -b <新分支名称>
 列举所有的分支：git branch
@@ -23,7 +25,10 @@ git version : 看git版本
 合并分支：git merge <合并到的分支>
 
 推送当前分支最新的提交到远程：git push    （如果本地已经有代码，需要git pull 拉取最新代码）
-拉取远程分支最新的提交到本地：git pull 
+拉取远程分支最新的提交到本地：git pull
+查看当前仓库链接：git remote -v 
+添加文件上游代码区:git remote add upstream <上游仓库代码>
+网页{pr里面选 base:master --> HEAD:<自己带的分支>}
 
 常见问题:
 git merge 结果是 git merge Already up-to-date. 该怎么解决？

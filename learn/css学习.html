@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css学习</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0%;
+    }
+    a{
+        /* 初始演示,在链接标签中等价于link*/
+        display: block;
+        width: 500px;
+        height: 70px;
+        font-size: 2em;
+        color: green;
+    }
+    #one{
+        /* 初始演示 */       
+        display: block;
+        width: 600px;
+        height: 50px;
+        font-size: 20px;
+    }
+    #i{
+        width: 10cm;
+        height: 1.3cm;
+        outline: 0px;/*外边框*/
+    }
+    a:visited{
+        /* 改变已经访问过的标签 ,该伪类只有颜色属性*/
+        color: red;
+    }
+    a:hover{
+        /* 鼠标划过时的样式（通用） 
+        这个标签可以加任何样式
+        css界的div
+        */
+        background-color: aqua;
+    }
+    a:active{
+        /* 点击元素时的样式，后两种都要位于link后 */
+        background-color: black;
+    }
+    /* 以上是毛链接的样式 */
+    #one:active{/*元素激活,当元素被点击时*/
+        font-size: 50px;
+    }
+    #i:focus{
+        /* 当输入框被点击时 */
+        border-color: blueviolet;
+        /* box-shadow:blue; */
+    }
+</style>
+<body>
+    <div id="one">我在学习红点工厂的css</div>
+    <a href="./css学习.html">百度知道</a>
+    <input placeholder="请输入点什么" id="i">
+</body>
+</html>

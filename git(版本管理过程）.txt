@@ -18,9 +18,9 @@ git version : 看git版本
 撤销最后一次提交：git reset HEAD^1
 
 
-以当前分支为基础新建分支：git checkout -b <新分支名称>
+以当前分支为基础新建分支：git checkout -b <新分支名称>（或者git switch -b <新分支名称>）
 列举所有的分支：git branch
-单纯地切换到某个分支：git checkout <新分支名称>
+单纯地切换到某个分支：git checkout <新分支名称>（或者git switch <新分支名称>）
 删掉特定的分支：git branch -D <新分支名称>
 合并分支：git merge <合并到的分支>
 

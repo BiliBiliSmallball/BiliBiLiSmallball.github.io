@@ -33,6 +33,9 @@ git merge 结果是 git merge Already up-to-date. 该怎么解决？
 切换回分支      git checkout 分支( 3、再切换至需要合并代码的分支)
 执行合并操作    git merge master(再合并代码，就可以合并成功了)
 
+Your branch is ahead of 'origin/master' by 2 commits.
+遇到这种问题,表示在你之前已经有2个commit而没有push到远程分支上,所以需要先git push origin **将本地分支提到远程仓库。
+
 本仓库地址：https://gitee.com/soul-fox/soulfox.com
 
 图形化：{更改}：打开，放弃，暂存

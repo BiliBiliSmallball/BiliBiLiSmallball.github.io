@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css学习动画</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    #one{
+        /* 初始样式 */
+        width:100px;
+        height: 100px;
+        background-color: green;
+        animation: act2 5s linear 2s infinite alternate;
+
+    }
+    /* animation-name:名字
+    animation-duration:花费时间
+    animation-timing-function:速度曲线
+    animation-delay: 开始前延迟
+    animation-iteration-count:次数
+    animation-direction:下一周期是否逆向
+    animation-play-state: 是否暂停
+    
+    
+    transfrom*/
+    #two{
+        /* 初始样式 */
+        width:100px;
+        height: 100px;
+        background-color: green;
+    }
+    /* 动画和过渡的区别：
+    过渡：从1到2
+    动画：自行运动 */
+@keyframes act{
+        /* keyframes关键词 */
+        from{
+            width: auto;
+            height: auto;
+        }to{
+            width: 25%;
+            height: 25%;
+            background-color: brown;
+        }
+        /* 直接定义开始和结束时的样子 */
+    }
+@keyframes act2{
+    0%{
+        background-color: aqua;
+    }
+    25%{
+        background-color: green;
+    }
+    50%{
+        background-color: blue;
+    }
+    100%{
+        background-color: chartreuse;
+    }
+    /* 细致定义到百分之几时怎样的 */
+}
+</style>
+<body>
+    <div id="one">我在学习红点工厂的css</div>
+    <br>
+    <div id="two">
+        这是一个真正的元素
+    </div>
+</body>
+</html>

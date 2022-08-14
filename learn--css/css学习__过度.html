@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css学习过度</title>
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+    }
+    #one{
+        /* 初始样式 */
+        width:100px;
+        height: 100px;
+        background-color: green;
+        transition-duration: 0.5s;
+        transition-property: all;
+        /* transition-property: width; */
+        transition-timing-function:linear;
+    }
+    #one:hover{
+        /* 设置一个样式，让过度生效 */
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+    }
+    /* 过渡的本质上是过程，所以有起点，终点 */
+    /* 
+    （在原始属性栏添加）
+
+    过渡属性：transition-property （什么变化）
+    过渡持续：transition-durantion
+    过渡时间函数:transition-timing-function:
+    过渡延迟:transition-delay: 0ms;（开始前等几秒）
+    过渡:transition:（简写从上到下）; */
+
+    /* 过渡时间函数:transition-timing-function:
+    liner: 线性
+    ease  缓和 
+    in开始（到结束）
+    out*/
+</style>
+<body>
+    <h4>过渡的本质上是过程，所以有起点，终点<dl>注意变化</dl></h4>
+    <div id="one">我在学习红点工厂的css</div>
+    
+    <a href="./css学习__伪类.html">百度知道</a>
+    
+    <input placeholder="请输入点什么" id="i">
+    
+    <div id="demo">
+        这是一个真正的元素
+    </div>
+</body>
+</html>

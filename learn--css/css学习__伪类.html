@@ -26,10 +26,22 @@
         height: 50px;
         font-size: 20px;
     }
+    #demo{
+        /* 初始演示 */       
+        display: block;
+        width: 600px;
+        height: 50px;
+        font-size: 20px;
+    }
     #i{
         width: 10cm;
         height: 1.3cm;
         outline: 0px;/*外边框*/
+    }
+    #d2{
+        width: 30px;
+        height: 30px;
+        background-color: aqua;
     }
     a:visited{
         /* 改变已经访问过的标签 ,该伪类只有颜色属性*/
@@ -47,18 +59,49 @@
         background-color: black;
     }
     /* 以上是毛链接的样式 */
-    #one:active{/*元素激活,当元素被点击时*/
+    #one:active{
+        /*元素激活,当元素被点击时*/
         font-size: 50px;
+    }
+    #one:hover #d2{
+        /*鼠标划过元素时的样式（通用）
+        加#d2是在one中的d2样式的内容*/
+        border-radius: 50px;
+        background-color: chartreuse;
     }
     #i:focus{
         /* 当输入框被点击时 */
         border-color: blueviolet;
         /* box-shadow:blue; */
     }
+/* 伪元素：在html文档中不存在，但是看的到的*/
+    #demo::after{
+        /* 在后面加一个元素，必须有一个属性：content */
+        content: " ";
+        display: block;
+        background-color: aquamarine;
+        width: 100px;
+        height: 100px;
+    }
+    #demo::before{
+        /* 在前面加一个元素，必须有一个属性：content */
+        display: block;
+        content: " ";
+        background-color: rgb(255, 0, 0);
+        width: 100px;
+        height: 100px;
+        visibility: hidden;/*加上这一条可以自动换行*/
+    }
+
 </style>
 <body>
-    <div id="one">我在学习红点工厂的css</div>
-    <a href="./css学习.html">百度知道</a>
+    <div id="one">我在学习红点工厂的css
+        <div id="d2"></div>
+    </div>
+    <a href="./css学习__伪类.html">百度知道</a>
     <input placeholder="请输入点什么" id="i">
+    <div id="demo">
+        这是一个真正的元素
+    </div>
 </body>
 </html>

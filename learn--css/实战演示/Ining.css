@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0%;
+  border-color: black;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to top, rgb(70, 247, 188), #66a6f6);
+}
+/* 网页标准模板 */
+.center {
+  /* 样式 */
+  background-color: #21fcfc;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* 定位 */
+  position: fixed;
+  top: 40vh;
+  left: 45%;
+  overflow:hidden
+}
+
+.center::before {
+  display: block;
+  content: " ";
+  width: 150px;
+  height: 150px;
+  background-color: rgb(225, 252, 190);
+  border-radius: 40%;
+  position: absolute;
+  left: 13%;
+  bottom: 45%;
+  animation: radio 5s linear 0s infinite;
+}    
+.center::after {
+  /* 写字 */
+  content: "加载中";
+  font-size: 2em;
+  /* 定位 */
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 40px);
+  color: #2797e7;
+  }
+
+
+
+@keyframes radio{
+  from{
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+}

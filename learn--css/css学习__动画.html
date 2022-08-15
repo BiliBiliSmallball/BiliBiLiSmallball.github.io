@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>css学习动画</title>
-</head>
-<style>
-    *{
-        margin: 0%;
-        padding: 0%;
+  </head>
+  <style>
+    * {
+      margin: 0%;
+      padding: 0%;
     }
-    #one{
-        /* 初始样式 */
-        width:100px;
-        height: 100px;
-        background-color: green;
-        animation: act2 5s linear 2s infinite alternate;
-
+    #one {
+      /* 初始样式 */
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      animation: act2 10s linear 0s;
     }
     /* animation-name:名字
     animation-duration:花费时间
@@ -29,48 +28,63 @@
     
     
     transfrom*/
-    #two{
-        /* 初始样式 */
-        width:100px;
-        height: 100px;
-        background-color: green;
+    #two {
+      /* 初始样式 */
+      position: fixed;
+      top: 50vh;
+      left: 50vh;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      animation: act 5s linear 0s infinite;
     }
     /* 动画和过渡的区别：
     过渡：从1到2
     动画：自行运动 */
-@keyframes act{
-        /* keyframes关键词 */
-        from{
-            width: auto;
-            height: auto;
-        }to{
-            width: 25%;
-            height: 25%;
-            background-color: brown;
-        }
-        /* 直接定义开始和结束时的样子 */
+    @keyframes act {
+      /* keyframes关键词 */
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+        background-color: brown;
+      }
+      /* 直接定义开始和结束时的样子 */
     }
-@keyframes act2{
-    0%{
+    @keyframes act2 {
+      0% {
         background-color: aqua;
-    }
-    25%{
+      }
+      25% {
         background-color: green;
-    }
-    50%{
+      }
+      50% {
         background-color: blue;
-    }
-    100%{
+      }
+      100% {
         background-color: chartreuse;
+      }
+      /* 细致定义到百分之几时怎样的 */
     }
-    /* 细致定义到百分之几时怎样的 */
-}
-</style>
-<body>
+    /* position 属性的五个值：
+
+static  HTML 元素的默认值，即没有定位，遵循正常的文档流对象。(静态定位的元素不会受到 top, bottom, left, right影响。)
+relative  元素的位置相对于浏览器窗口是固定位置。
+fixed 相对定位元素的定位是相对其正常位置。
+absolute  绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素
+
+sticky基于用户的滚动位置来定位。
+
+粘性定位的元素是依赖于用户的滚动，在 position:relative 与 position:fixed 定位之间切换。
+它的行为就像 position:relative; 而当页面滚动超出目标区域时，它的表现就像 position:fixed;，它会固定在目标位置。
+
+元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位。 */
+  </style>
+  <body>
     <div id="one">我在学习红点工厂的css</div>
-    <br>
-    <div id="two">
-        这是一个真正的元素
-    </div>
-</body>
+    <br />
+    <img src="./实例1.png" width="500px" height="300px" />
+    <div id="two">这是一个真正的元素</div>
+  </body>
 </html>

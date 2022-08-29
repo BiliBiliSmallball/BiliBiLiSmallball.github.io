@@ -116,9 +116,30 @@ div.first {
   border: 1px solid rgba(0, 7, 0, 0.829);
   background-color: #eee;
 }
-/* * {
+
+div.first_r{
+    background-color: #eee;
+    color: #eee;
+
+}
+div.first_r::before{
+  display: block;
+  content: "翻牌了解";
+  background-color: rgb(0, 193, 252);
+  color: rgb(0, 0, 0);
+  font-size: 0.6em;
+  height: 45%;
+  width: 100%;
+}
+
+div.first_r:hover{
+  color: red;
+}
+
+/*测试样例*/
+* {
   border: 1px solid rgba(0, 7, 0, 0.829);
-} */
+}
 
 /* 
     //flex盒子有几个属性：

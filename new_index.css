@@ -117,22 +117,22 @@ div.first {
   background-color: #eee;
 }
 
-div.first_r{
-    background-color: #eee;
-    color: #eee;
-
+div.first_r {
+  background-color: #eee;
+  color: #eee;
 }
-div.first_r::before{
+div.first_r::before {
   display: block;
   content: "翻牌了解";
   background-color: rgb(0, 193, 252);
   color: rgb(0, 0, 0);
-  font-size: 0.6em;
+  font-size: 0.82em;
+  position: relative;
   height: 45%;
   width: 100%;
 }
 
-div.first_r:hover{
+div.first_r:hover {
   color: red;
 }
 

@@ -5,4 +5,5 @@
 //有：返回oop,没有返回err(前端提示)
 window.alert("欢迎来到起始页！！")
 
-fetch("http://127.0.0.1/user",{method:"GET",}).then()
+fetch("http://127.0.0.1/user", { method: get })
+    .then(function(response){console.log(response)});

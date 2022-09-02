@@ -11,7 +11,7 @@
     <input placeholder="请输入姓名" id="user_name" />
     <input type="password" placeholder="请输入密码" id="user_pass" />
     <button type="submit" onclick="push()">点我启动服务</button>
-    <p>（打开12022端口）</p>
+    <p>（打开20221端口）</p>
   </body>
   <script>
     function push() {
@@ -19,7 +19,7 @@
         let U_pass=document.getElementById("user_name")
         let sheet= {_name:U_name,_pass:U_pass}
 
-        fetch("http://127.0.0.1:1202/user",{method:push})
+        fetch("http://127.0.0.1:20221/user",{method:push})
             .then((response) => response.json())
     }
   </script>

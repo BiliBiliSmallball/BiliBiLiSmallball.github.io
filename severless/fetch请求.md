@@ -1,4 +1,5 @@
 # fetch().then
+来源[点我了解](https://www.freesion.com/article/59231320087/)
 ## 实例
 ```js
 //请求的网址

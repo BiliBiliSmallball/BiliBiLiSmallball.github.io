@@ -12,5 +12,5 @@ app.listen(20221, function () {
   console.log("请打开 http://localhost:20221/ 访问结果");
 });
 //输入
-//npx ts-node .\severless\模拟后台.ts
+//node ts-node .\severless\模拟后台.ts
 //开启服务

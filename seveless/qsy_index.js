@@ -6,4 +6,4 @@
 window.alert("欢迎来到起始页！！")
 
 fetch("http://127.0.0.1:1202/user", { method: get })
-    .then(function(response){console.log(response)});
+    .then()

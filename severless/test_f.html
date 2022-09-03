@@ -21,10 +21,12 @@
         //获取数据，并组合成对象
 
         var posted = JSON.stringify(sheet);
-        fetch("http://127.0.0.1:20221/user",{method:push})
+        fetch("http://127.0.0.1:20221/user",{
+          method:push
+        })
             .then((response) => response.json())
             //加入操作
-
+            .then(data =>console.log(data))
             .catch(err => console.log(err));//错误捕捉
     }
   </script>

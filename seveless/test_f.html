@@ -8,15 +8,26 @@
   </head>
   <script src="./qsy_index.js"></script>
   <body>
-    <input type="text" placeholder="请输入提交内容" id="box" />
-    <button type="submit" onclick="">点我启动服务</button>
-    <p>（打开12022端口）</p>
+    <input placeholder="请输入姓名" id="user_name" />
+    <input type="password" placeholder="请输入密码" id="user_pass" />
+    <button type="submit" onclick="push()">点我启动服务</button>
+    <p>（打开20221端口）</p>
   </body>
   <script>
-    function updata() {
-      fetch("http://127.0.0.1:1202/user", { method: post }).then((req, res) => {
-        req.hand = document.getElementById("box");
-      });
+    function push() {
+        let U_name=document.getElementById("user_name")
+        let U_pass=document.getElementById("user_name")
+        let sheet= {_name:U_name,_pass:U_pass}
+        //获取数据，并组合成对象
+
+        var posted = JSON.stringify(sheet);
+        fetch("http://127.0.0.1:20221/user",{
+          method:push
+        })
+            .then((response) => response.json())
+            //加入操作
+            .then(data =>console.log(data))
+            .catch(err => console.log(err));//错误捕捉
     }
   </script>
 </html>

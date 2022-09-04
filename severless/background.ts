@@ -11,7 +11,7 @@ app.use(
 );
 
 app.get("/test", async (res, req) => {
-  req.send("数据成功返回");
+  req.send({hello:"数据成功返回"});
 });
 
 app.post("/user", async (res, req) => {

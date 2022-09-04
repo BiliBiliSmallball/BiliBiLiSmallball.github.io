@@ -6,6 +6,7 @@ import cors from "cors"//网站跨域请求
 app.use(
   cors({
     origin: "*", //网站跨域请求，允许请求所有
+    methods:["GET","POST"]
   })
 );
 
@@ -17,10 +18,10 @@ app.post("/user", async (res, req) => {
   console.log(res.body)
 });
 
-app.listen(20221, function () {
+app.listen(433, function () {
   //端口监听7700
-  console.log("监听端口: 20221 已经开放"); //console.log("app is listening at 127.0.0.1:8081 ");
-  console.log("请打开 http://localhost:20221/ 访问结果");
+  console.log("监听端口: 433 已经开放"); //console.log("app is listening at 127.0.0.1:433 ");
+  console.log("请打开 http://localhost:433/ 访问结果");
 });
 //输入
 //npx ts-node ./severless\background.ts

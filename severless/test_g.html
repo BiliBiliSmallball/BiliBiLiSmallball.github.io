@@ -12,10 +12,10 @@
 <script>
     let ar = document.getElementById("in");
     fetch("http://localhost:433/test")
-    .then((response) => response.json())
+    //.then((response) => response.json())            这行有问题
         //加入操作
         .then((data) => {
-            ar.innerHTML = data;
+            console.log(data)
         })
         .catch((err) => console.log(err)); //错误捕捉
 </script>

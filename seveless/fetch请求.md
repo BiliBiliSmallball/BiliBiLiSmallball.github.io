@@ -26,3 +26,23 @@ fetch("服务器地址（完整）") //返回一个primis对象
 ```
 
 ### 综上所述
+
+1. post 请求标准格式
+
+```js
+function push() {
+      //获取数据，并组合成对象
+
+      fetch("服务器地址/user",{
+        method: "POST",
+        body: JSON.stringify({ sheet }), //传输主体
+        headers: {
+          "Content-Type": "applocation/json",
+        },
+      })
+        .then((response) => response.json())
+        //后续操作
+        .then((data) => console.log(data));
+        .catch((err) => console.log(err)); //错误捕捉
+    }
+```

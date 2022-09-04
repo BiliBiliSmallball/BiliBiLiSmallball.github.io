@@ -22,3 +22,4 @@ fetch('服务器地址（完整）',)//返回一个primis对象
 ## 服务器配置
 >npm install cors
 配置跨域请求
+[Express学习](http://cw.hubwiz.com/card/c/544db33888dba01ef09d0682/1/1/12/)

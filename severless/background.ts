@@ -2,6 +2,13 @@ import express from "express";
 //导入express并创建对象
 const app = express();
 
+import cors from "cors"//网站跨域请求
+app.use(
+  cors({
+    origin: "*", //网站跨域请求，允许请求所有
+  })
+);
+
 app.get("/test", async (res, req) => {
   req.send("数据成功返回");
 });

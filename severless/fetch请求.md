@@ -18,3 +18,7 @@ fetch('服务器地址（完整）',)//返回一个primis对象
   .then(res => res.json())//json转化为js对象
 ```
 ### 综上所述
+
+## 服务器配置
+>npm install cors
+配置跨域请求

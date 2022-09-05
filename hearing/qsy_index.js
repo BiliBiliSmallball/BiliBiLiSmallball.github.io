@@ -8,6 +8,7 @@ window.alert("欢迎来到起始页！！");
 fetch("http://localhost:433/hellow", { method: "GET" })
   .then((res) => res.json())
   .then((data) => console.log(data.by))
+  .catch((err) => console.log(err)); //错误捕捉
   
 
 // 出现net::ERR_CONNECTION_REFUSED问题, 

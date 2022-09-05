@@ -1,4 +1,4 @@
-import express from "express";
+const express = Request("express");
 //导入express并创建对象
 const app = express();
 

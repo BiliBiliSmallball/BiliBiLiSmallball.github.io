@@ -10,12 +10,16 @@ app.use(
   })
 );
 
-app.get("/test", async (res, req) => {
-  req.send({hello:"数据成功返回"});
+app.get("/hellow", async (req, res) => {
+  res.send({by:"你好世界"});
 });
 
-app.post("/user", async (res, req) => {
-  console.log(res.body)
+app.get("/test", async (req, res) => {
+  res.send({hello:"数据成功返回"});
+});
+
+app.post("/user", async (req, res) => {
+  console.log(req.body)
 });
 
 app.listen(433, function () {

@@ -5,10 +5,10 @@
 //有：返回res,没有返回err(前端提示)
 window.alert("欢迎来到起始页！！");
 
-fetch("http://localhost:433/test", { method: "GET" })
+fetch("http://localhost:433/hellow", { method: "GET" })
   .then((res) => res.json())
-  .then((data) => console.log(data));
-
+  .then((data) => console.log(data.by))
+  
 
 // 出现net::ERR_CONNECTION_REFUSED问题, 
 // 1.一般是访问的端口号或者ip地址有问题,如图改成本地项目访问地址即可 

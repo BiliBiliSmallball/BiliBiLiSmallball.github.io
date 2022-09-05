@@ -1,4 +1,4 @@
-const express = Request("express");
+const express = request("express");
 //导入express并创建对象
 const app = express();
 

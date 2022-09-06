@@ -11,7 +11,7 @@ app.use(
 );
 
 app.get("/hellow", async (req, res) => {
-  res.send({by:"你好世界"});
+  res.send({ by: "你好世界" });
 });
 
 app.post("/in_p", async (req, res) => {
@@ -19,8 +19,8 @@ app.post("/in_p", async (req, res) => {
 });
 
 app.post("/user", async (req, res) => {
-  console.log("成功运行")
-  console.log(req.body)
+  console.log("成功运行");
+  console.log(req.body);
 });
 
 app.listen(433, function () {

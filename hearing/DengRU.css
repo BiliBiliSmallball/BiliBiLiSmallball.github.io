@@ -6,7 +6,7 @@
 body {
   /* 背景 */
   background-image: url(https://img1.baidu.com/it/u=3882214859,3693254387&fm=253&fmt=auto&app=120&f=JPEG?w=1280&h=800);
-  background-size: auto 100vh;
+  background-size: 100% 100vh;
   background-repeat: no-repeat;
   /* 布局 */
   display: flex;

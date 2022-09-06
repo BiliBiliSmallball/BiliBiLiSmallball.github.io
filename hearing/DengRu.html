@@ -6,24 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>测试测试</title>
   </head>
-  <script src="./qsy_index.js"></script>
+  <link rel="stylesheet" type="text/css" href="./DengRU.css" />
   <body>
-    <input placeholder="请输入姓名" id="user_name" />
-    <input type="password" placeholder="请输入密码" id="user_pass" />
-    <button type="submit" onclick="push()">点我启动服务</button>
-    <p>（打开20221端口）</p>
+    <!-- 表单式主体 -->
+    <form class="down">
+      用户名<br />
+      <input placeholder="请输入用户名" id="user_name" /><br />
+      密码<br />
+      <input type="password" placeholder="请输入密码" id="user_pass" />
+      <input type="submit" /><input type="button" value="重置" />
+    </form>
   </body>
+
+  <!-- 登入前 -->
+  <script src="./qsy_index.js"></script>
+  <!-- 主要的js -->
   <script>
     function push() {
       let U_name = document.getElementById("user_name");
-      let U_pass = document.getElementById("user_name");
+      let U_pass = document.getElementById("user_pass");
       let sheet = { _name: U_name, _pass: U_pass };
       //获取数据，并组合成对象
-      let _POST = JSON.stringify({sheet})
+      // console.log([sheet._name.value, sheet._pass.value]);
 
-      fetch("http://127.0.0.1:433/user", {
+      fetch("http://127.0.0.1:20221/user", {
         method: "POST",
-        body:_POST, //传输主体
+        body: JSON.stringify({ sheet }), //传输主体
         headers: {
           "Content-Type": "applocation/json",
         },

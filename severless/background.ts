@@ -19,6 +19,7 @@ app.get("/test", async (req, res) => {
 });
 
 app.post("/user", async (req, res) => {
+  console.log("成功运行")
   console.log(req.body)
 });
 

@@ -14,8 +14,8 @@ app.get("/hellow", async (req, res) => {
   res.send({by:"你好世界"});
 });
 
-app.get("/test", async (req, res) => {
-  res.send({hello:"数据成功返回"});
+app.post("/in_p", async (req, res) => {
+  console.log(req.body);
 });
 
 app.post("/user", async (req, res) => {

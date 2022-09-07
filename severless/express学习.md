@@ -102,7 +102,7 @@ app.get("*", function(request, response) {
 >5.	DELETE	请求服务器删除指定的页面。
 >9. HEAD	类似于 GET 请求，只不过返回的响应中没有具体的内容，用于获取报头
 
-来源：[http协议](https://gitee.com/soul-fox/soulfox.com/blob/fetch/seveless/http%E5%8D%8F%E8%AE%AE.md)
+来源：[http协议](./http%E5%8D%8F%E8%AE%AE.md)
 
 ### 2.中间件
 _来源：[Express中间件简介](http://t.zoukankan.com/jianxian-p-12300351.html)_
@@ -204,7 +204,7 @@ app.listen(80);
 ```
 在浏览器中输入任意一个请求路径，通过req查看主机名或请求路径。
 
-2. req.query获取get请求路径的对象参数值。
+#### 2. req.query获取get请求路径的对象参数值。
 
 格式：```req.query.参数名```；请求路径如下示例：
 ```
@@ -220,7 +220,7 @@ req.query.shoe.type  // "converse"
 ```
 
 
-3. send方法
+#### 3. send方法
 >send()方法向浏览器发送一个响应信息，并可以智能处理不同类型的数据。格式如下：
 ```res.send([body|status], [body]);```
 1.当参数为一个String时，Content-Type默认设置为"text/html"。
@@ -238,3 +238,12 @@ res.send(200); // OK
 res.send(404); // Not Found
 res.send(500); // Internal Server Error
 ```
+
+#### 4. express.static —— 指定静态文件的查找目录。
+```js
+app.use(express.static(require("path").join(__dirname, 'public')));
+```
+
+使用use函数调用中间件指定express静态访问目录，'public'就是我们我们新建的用来存放静态文件的总目录。
+
+#### 5.

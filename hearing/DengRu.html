@@ -11,13 +11,13 @@
     <!-- 表单式主体 -->
     <div class="login">
       <h1>Login</h1>
-      <form action="push()">
+      <form>
         用户名<br>
         <input placeholder="请输入用户名" id="user_name" /><br />
         密码<br>
         <input type="password" placeholder="请输入密码" id="user_pass" />
         <!-- 提交按钮 --><br>
-        <input type="submit" class="_g" /><input type="reset" value="重置" class="_g"/>
+        <input type="submit" class="_g" onclick="yanzheng()"/><input type="reset" value="重置" class="_g"/>
       </form>
       <div style="font-size:18px;">还没有注册？<a id="zc" href="./ZhuCe.html">点我注测</a></div>
     </div>
@@ -26,25 +26,5 @@
   <!-- 登入前 -->
   <script src="./qsy_index.js"></script>
   <!-- 主要的js -->
-  <script>
-    function push() {
-      let U_name = document.getElementById("user_name");
-      let U_pass = document.getElementById("user_pass");
-      let sheet = { _name: U_name, _pass: U_pass };
-      //获取数据，并组合成对象
-      // console.log([sheet._name.value, sheet._pass.value]);
-
-      fetch("http://127.0.0.1:20221/user", {
-        method: "POST",
-        body: JSON.stringify({ sheet }), //传输主体
-        headers: {
-          "Content-Type": "applocation/json",
-        },
-      })
-        .then((response) => response.json())
-        //加入操作
-        .then((data) => console.log(data))
-        .catch((err) => console.log(err)); //错误捕捉
-    }
   </script>
 </html>

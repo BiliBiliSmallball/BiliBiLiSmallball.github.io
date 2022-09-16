@@ -1,33 +1,75 @@
+import { PrismaClient } from "@prisma/client";
 import express from "express";
-//导入express并创建对象
-const app = express();
+import cors from "cors";
 
-import cors from "cors"//网站跨域请求
+const app = express();
+const prisma = new PrismaClient();
+
+app.use(express.json());
+
 app.use(
   cors({
-    origin: "*", //网站跨域请求，允许请求所有
-    methods:["GET","POST"]
+    origin: "*",
+    methods: "*",
   })
 );
 
-app.get("/hellow", async (req, res) => {
-  res.send({ by: "你好世界" });
+app.get("/", async (req, res) => {
+  res.send("请选择:\n/find,\n/signup查看结果");
 });
 
-app.post("/in_p", async (req, res) => {
-  console.log(req.body);
+//测试
+app.get("/test", async (req, res) => {
+  let t = [1, "1", { 数据: "标配" }];
+  res.json(t);
 });
 
-app.post("/user", async (req, res) => {
-  console.log("成功运行");
-  console.log(req.body);
+app.post("/find", async (req, res) => {
+  //用户查询
+  const { L_name, PassWord } = req.body;
+  const result = await prisma.user.findUnique({
+    where: {
+      //定位
+      L_name: String(L_name),
+    },
+  });
+  //用户判断部分
+  if (result?.PassWord === req.body.PassWord) {
+    res.json(true);
+  } else {
+    res.json("err! not find user");
+  }
 });
 
-app.listen(433, function () {
+app.post("/see", async (req, res) => {
+  const result = req.body;
+  res.json(result);
+});
+
+app.get("/findall", async (req, res) => {
+  //查询所有
+  const result = await prisma.user.findMany();
+  // const result = TODO
+  res.json(result);
+});
+
+app.post("/signup", async (req, res) => {
+  //用户注册
+  const { L_name, PassWord } = req.body; //'Name' and 'Email'两个数据从req的body里面抽取
+  const result = await prisma.user.create({
+    data: {
+      L_name,
+      PassWord, //直接建
+    },
+  }); // const result = TODO;              这一行是用来填充的(上面一坨等价于TODO)
+  res.json(result);
+});
+
+app.listen(114, function () {
   //端口监听7700
-  console.log("监听端口: 433 已经开放"); //console.log("app is listening at 127.0.0.1:433 ");
-  console.log("请打开 http://localhost:433/ 访问结果");
+  console.log("监听端口: 114 已经开放"); //console.log("app is listening at 127.0.0.1:114 ");
+  console.log("请打开 http://localhost:114/ 访问结果");
 });
 //输入
-//npx ts-node ./severless\background.ts
+//npx ts-node ./soulfox.sever/index.ts
 //开启服务

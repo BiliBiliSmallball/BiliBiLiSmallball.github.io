@@ -9,7 +9,8 @@ window.alert("欢迎来到起始页！！")//这个是开始
 function yanzheng(){
    let un = document.getElementById("user_name").value;
    let pw = document.getElementById("user_pass").value;
-   console.log(JSON.stringify({ L_name: un, PassWord: pw }));
+  
+
    //发送
    fetch("http://localhost:114/find", {
      method: "post",
@@ -20,6 +21,7 @@ function yanzheng(){
      .then((data) => {
        if (data === true) {
          window.alert("登入成功！");
+         console.log(data)
        } else {
          window.alert("是不是没有注册？");
          console.log(data);

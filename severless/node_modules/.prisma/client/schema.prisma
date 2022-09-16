@@ -11,7 +11,7 @@ model User{
     Name String? 
     Id Int @id @default(autoincrement())
     L_name String @unique 
-    PassWord String @unique
+    PassWord String 
     text Msg[]
 }
 

@@ -18,12 +18,6 @@ app.get("/", async (req, res) => {
   res.send("请选择:\n/find,\n/signup查看结果");
 });
 
-//测试
-app.get("/test", async (req, res) => {
-  let t = [1, "1", { 数据: "标配" }];
-  res.json(t);
-});
-
 app.post("/find", async (req, res) => {
   //用户查询
   const { L_name, PassWord } = req.body;
@@ -71,5 +65,5 @@ app.listen(114, function () {
   console.log("请打开 http://localhost:114/ 访问结果");
 });
 //输入
-//npx ts-node ./soulfox.sever/index.ts
+//npx ts-node ./severless\background.ts
 //开启服务

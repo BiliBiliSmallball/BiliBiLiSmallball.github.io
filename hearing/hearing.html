@@ -18,9 +18,10 @@
         href="./index.html"
         >返回首页</a
       >
+      <a id="DL"></a>
     </div>
+    <!--两侧图片（左）-->
     <div id="main">
-      <!--两侧图片（左）-->
       <img
         src="https://img0.baidu.com/it/u=1932800683,2715282874&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=707"
         height="456px"
@@ -62,4 +63,12 @@
   //    box-sizing: border-box;
   function loging(){
   window.href="../WangPang/loging.html"}
+
+  let dl =document.getElementById("DL")
+  const _in = window.localStorage.getItem(use_name)
+  if(_in === undefined){
+    dl.innerHTML = "请登入"
+  }else{
+    
+  }
 </script>

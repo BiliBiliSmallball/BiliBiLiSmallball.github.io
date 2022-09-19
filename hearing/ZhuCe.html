@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zn-ch">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试测试</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="./DengRU.css" />
+  <body>
+    <!-- 表单式主体 -->
+    <div class="login">
+      <h3>注册</h3>
+      <form>
+        用户名<br>
+        <input placeholder="请输入用户名" id="user_name" /><br />
+        密码<br>
+        <input type="password" placeholder="请输入密码" id="user_pass" />
+        <!-- 提交按钮 --><br>
+        <input type="submit" class="_g" onclick="fs()"/><input type="reset" value="重置" class="_g"/>
+      </form>
+    </div>
+  </body>
+  <script>
+    function fs(){
+        let U_name = document.getElementById("user_name");
+      let U_pass = document.getElementById("user_pass");
+      let sheet = { _name: U_name, _pass: U_pass };
+      //获取数据，并组合成对象
+
+      fetch("http://localhost:433/in_P",{
+        method: "POST",
+        headers: {
+          "Content-Type": "applocation/json",
+        },
+        body: JSON.stringify({ sheet }), //传输主体
+      })
+    }
+  </script>
+</html>

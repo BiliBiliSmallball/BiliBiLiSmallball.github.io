@@ -47,3 +47,8 @@ Your branch is ahead of 'origin/master' by 2 commits.
 commit（分支）：第五个：合并分支 第六个：刷新
 
 toggel : 切换
+
+【已解决】 Git本地仓库上传Gitee后文件夹不能打开
+
+如果我们从本地push到远程仓库的项目，文件夹不能打开且样子是文件跟@+数字，解决办法如下
+项目的某个子文件夹内多了.git文件夹，删除掉，重新add，commit，push就好了

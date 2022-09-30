@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width,initial-scalr=1.0" />
 	
-	<link rel="shortcut icon" href="./self_photo.jpg" type="image/x-icon"/>
+	<link rel="shortcut icon" href="../self_photo.jpg" type="image/x-icon"/>
     <title>留言版——朱朱墙</title>
     <link rel="stylesheet" type="text/css" href="./hearing_S.css" />
-	<body onpageshow="loging()">
+	  <body onpageshow="loging()">
+    <!-- 强制登入 -->
+    <script src="./hearing_find.js"></script>
   </head>
   <body>
     <!--开头，名字栏-->
@@ -18,7 +20,6 @@
         href="./index.html"
         >返回首页</a
       >
-      <a id="DL"></a>
     </div>
     <!--两侧图片（左）-->
     <div id="main">
@@ -48,7 +49,13 @@
     <p>copyright@zzy1535878824@163.com<br />版权所用，违法必究</p>
   </body>
 </html>
+
 <script>
+  function loging() {
+    window.href = "../WangPang/loging.html";
+  }
+
+
   //flex盒子有几个属性：
   //主轴（横轴）main axis交叉轴
   //默认有：
@@ -61,14 +68,4 @@
   //alt + shift +上下键：复制一行相同元素
 
   //    box-sizing: border-box;
-  function loging(){
-  window.href="../WangPang/loging.html"}
-
-  let dl =document.getElementById("DL")
-  const _in = window.localStorage.getItem(use_name)
-  if(_in === undefined){
-    dl.innerHTML = "请登入"
-  }else{
-     null
-  }
 </script>

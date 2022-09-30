@@ -1,4 +1,3 @@
-
 //检测是否有本地账户
 let User_n = window.localStorage.getItem("u_name");
 if (!User_n) {

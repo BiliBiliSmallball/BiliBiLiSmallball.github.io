@@ -4,15 +4,13 @@
 //2.if有/没有
 //有：返回res,没有返回err(前端提示)
 
-window.alert("欢迎来到起始页！！")//这个是开始
-
 function yanzheng(){
    let un = document.getElementById("user_name").value;
    let pw = document.getElementById("user_pass").value;
   
 
    //发送
-   fetch("http://localhost:114/find", {
+   fetch("http://39.98.84.17:114/find", {
      method: "post",
      headers: { "Content-Type": "application/json" },
      body: JSON.stringify({ L_name: un, PassWord: pw }),
@@ -20,8 +18,10 @@ function yanzheng(){
      .then((res) => res.json())
      .then((data) => {
        if (data === true) {
-         window.alert("登入成功！");
-         console.log(data)
+        window.alert("登入成功！");
+        console.log(data);
+        //返回
+        history.back()
        } else {
          window.alert("是不是没有注册？");
          console.log(data);

@@ -29,7 +29,7 @@ app.post("/find", async (req, res) => {
   });
   //用户判断部分
   if (result?.PassWord === req.body.PassWord) {
-    res.json(true);
+    res.json({ re_res: true,OutName:result?.Name });
   } else {
     res.json("err! not find user");
   }

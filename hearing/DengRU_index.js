@@ -17,11 +17,12 @@ function yanzheng(){
    })
      .then((res) => res.json())
      .then((data) => {
-       if (data === true) {
-        window.alert("登入成功！");
-        console.log(data);
-        //返回
-        history.back()
+       if (data.re_res === true) {
+         window.alert("登入成功！");
+         console.log(data.OutName);
+        window.localStorage.setItem(Admin,data.OutName);
+         //返回
+         history.back();
        } else {
          window.alert("是不是没有注册？");
          console.log(data);

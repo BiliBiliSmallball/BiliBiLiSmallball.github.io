@@ -16,13 +16,12 @@ function yanzheng(){
      body: JSON.stringify({ L_name: un, PassWord: pw }),
    })
      .then((res) => res.json())
+     .then((out) =>console.log(out))
      .then((data) => {
-       if (data.re_res === true) {
+       if (data.out_ok === true) {
          window.alert("登入成功！");
-         console.log(data.OutName);
-        window.localStorage.setItem(Admin,data.OutName);
-         //返回
-         history.back();
+         console.log(data.Name);
+         window.localStorage.setItem(Admin, data.Name);
        } else {
          window.alert("是不是没有注册？");
          console.log(data);

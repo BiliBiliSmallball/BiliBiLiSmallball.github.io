@@ -100,14 +100,7 @@ div.first {
   margin: 0px;
   background-color: #c4e6fde7;
 }
-
-.first_r {
-  height: 100%;
-  width: 100%;
-  margin: 1px;
-  border: 1px solid rgba(0, 7, 0, 0.829);
-  font-size: 26px;
-}
+/* 人物信息栏（一级） */
 .first_r_1 {
   height: 25%;
   width: 100%;
@@ -117,24 +110,36 @@ div.first {
   background-color: #eee;
 }
 
-div.first_r {
+/* 二级 */
+.first_r {
+  height: 100%;
+  width: 100%;
+  margin: 1px;
+  border: 1px solid rgba(0, 7, 0, 0.829);
+  font-size: 26px;
   background-color: #eee;
-  color: #eee;
+  color: #c4e6fde7;
 }
-div.first_r::before {
+/* 下方伪类定义
+是想把他做成一个动画一样的东西，鼠标移动到上面的时候就上移消失 */
+div.first_r:before {
   display: block;
   content: "翻牌了解";
   background-color: rgb(0, 193, 252);
   color: rgb(0, 0, 0);
   font-size: 0.82em;
-  position: relative;
-  height: 45%;
-  width: 100%;
+  /* 动画部分 */
+  height: 100%;
 }
 
-div.first_r:hover {
+div.first_r:hover{
+  position: relative;
+  top: -100px;
   color: red;
+  background-color: rgb(142, 71, 255);
 }
+
+
 
 /*测试样例*/
 * {

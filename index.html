@@ -9,6 +9,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" type="text/css" href="./new_index.css" />
+    <script src="./index.js"></script>
     <title>圆滚滚的小毛的个人网站</title>
   </head>
   <body>
@@ -22,7 +23,8 @@
     </ul>
 	<!-- 网页歌曲 -->
 	<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1923927650&auto=1&height=66"></iframe>点击上方开启音乐，更香哦
-    <div class="first">
+  <div id="clock"></div>  
+  <div class="first">
       <!-- 第一页 -->
       <div id="handing">
         <h5 style="align-items: center; color: rgb(0, 0, 255); text-align: center">
@@ -134,14 +136,4 @@
       网站备案号:<del>没有的啦</del><br />E-mail:zzy1535878824@163.com
     </p>
   </body>
-  <script>
-    let in_name = document.getElementsByName("name");
-    function thank() {
-      document.getElementById("thank").innerHTML =
-        "感谢您的留言!<br>我将于2~3个工作日内以您所选的联系形式回复您";
-    }
-	function going(){
-		window.alert("即将跳转至朱朱墙！请确认！");
-		window.open('./hearing/hearing.html','_self')}
-  </script>
 </html>

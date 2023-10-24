@@ -10,18 +10,17 @@ function yanzheng(){
   
 
    //发送
-   fetch("http://39.98.84.17:114/find", {
+   fetch("https://39.98.84.17:114/find", {
      method: "post",
      headers: { "Content-Type": "application/json" },
      body: JSON.stringify({ L_name: un, PassWord: pw }),
    })
      .then((res) => res.json())
-     .then((out) =>console.log(out))
      .then((data) => {
-       if (data.out_ok === true) {
+       if (data.re_res === true) {
          window.alert("登入成功！");
          console.log(data.Name);
-         window.localStorage.setItem(Admin, data.Name);
+        window.localStorage.setItem(Admin,un);
        } else {
          window.alert("是不是没有注册？");
          console.log(data);

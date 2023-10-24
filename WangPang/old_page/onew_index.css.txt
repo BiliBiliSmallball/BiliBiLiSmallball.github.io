@@ -11,14 +11,6 @@ body {
   /* max-width: 1168px; */
   /* background-color: rgb(219, 217, 217); */
 }
-
-/*音乐部分*/
-#song{
-	desplay:flex;
-	flex-direction:row;
-	width:50%;
-}
-
 #talking_html {
   height: auto;
   width: 30vh;

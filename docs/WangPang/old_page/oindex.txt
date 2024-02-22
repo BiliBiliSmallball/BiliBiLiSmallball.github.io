@@ -16,15 +16,14 @@
       <!--导航栏-->
       <li><a href="./index.html">主页</a></li>
       <li><a href="https://gitee.com/soul-fox">我的gitee主页</a></li>
-      <li><a href="https://yiyan.baidu.com/">A.I.问答</a></li>
+      <li><a href="https://effidit.qq.com/">A.I.写作</a></li>
       <li><a href="./hearing/loging.html">我的自建论坛</a></li>
       <li><a href="./WangPang_QiShiYe.html">起始页</a></li>
     </ul>
 	<!-- 网页歌曲 -->
-	<div>
+	<div style="justify-content:center">
 	<iframe display='none' frameborder="yes" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2043177987&auto=1&height=66"></iframe>点击上方开启音乐，更香哦
-	<iframe id="song" src="./test_addess/time.html">
-	</div>
+	<div>
     <div class="first">
       <!-- 第一页 -->
       <div id="handing">
@@ -60,13 +59,10 @@
         <br />
       </div>
     </div>
-	
-
 	<!-- 自我介绍-->
     <iframe class="self" src="./Bet_On_Me.html">
-	</iframe>
 
-
+    </iframe>
 	<!-- 链接 -->
 	<div class="first">
     <div style="display: flex; justify-content: center">

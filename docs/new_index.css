@@ -62,7 +62,7 @@ ul.hand {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  background-color: #eee;
+  background-color: #0f71e0;
   width: 100%;
 }
 /* 以下是导航栏 */
@@ -99,7 +99,7 @@ a:active {
   background-color: #eee;
 }
 div.first {
-  display: flex;
+  /* display: flex; */
   align-self: center;
   text-align: center;
   justify-content: center;

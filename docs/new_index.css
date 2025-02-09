@@ -265,7 +265,7 @@ ul.hand li a:hover {
 /* 音乐播放器样式 */
 .music-controls {
   position: fixed;
-  top: 20px;
+  top: 60px;
   right: 20px;
   z-index: 1000;
   background-color: #87CEEB; /* 按钮背景为天蓝色 */

@@ -1,163 +1,208 @@
 /* 这叫外部样式表，用link引入
 link rel="stylesheet" type="text/css" href="./index_s.css" */
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* 全局样式 */
+* {
   margin: 0;
-  background-image: url("https://img1.baidu.com/it/u=2142811971,206741594&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=313");
-  min-width: 450px;
-  width: 100%;
-  /* max-width: 1168px; */
-  /* background-color: rgb(219, 217, 217); */
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*音乐部分*/
-#song{
-	desplay:flex;
-	flex-direction:row;
-	width:50%;
-}
-
-#talking_html {
-  height: auto;
-  width: 30vh;
-  background-color: #ffffff;
-}
-.self {
-  background-color: rgb(247, 248, 188);
-  text-align: center;
-  border-radius: 10%;
-  width: 100%;
-  height: 30em;
-  content: 10px 80px;
-  margin: 0px;
-}
-#handing {
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* 背景颜色 */
+  color: #333;
+  line-height: 1.6;
   display: flex;
-  font-size: 0.83em;
-  padding: 40px 40px;
-  font-weight: bold;
-  color: #000000;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-self: center;
+  align-items: center; /* 水平居中 */
+  justify-content: center; /* 垂直居中 */
+  height: 100vh; /* 占满视口高度 */
 }
-#blbl {
-  background-color: rgb(3, 175, 243);
-  color: rgb(0, 0, 0);
-}
-.top {
-  padding: 60px 80px;
-}
-p {
-  color: blue;
-  font-size: 12px;
-}
+
+/* 导航栏样式 */
 ul.hand {
-  /* 将导航栏设成顶部的样子 */
-  margin: 0%;
-  border: 0%;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  background-color: #0f71e0;
-  width: 100%;
-}
-/* 以下是导航栏 */
-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  overflow: hidden;
+  background-color: #87CEEB; /* 天蓝色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* 增高 */
+  width: 100%; /* 宽度占满 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  position: fixed; /* 固定在顶部 */
+  top: 0;
+  z-index: 1000; /* 确保在最上层 */
 }
-li {
+
+ul.hand li {
   display: inline;
+  margin: 0 20px; /* 增加间距 */
 }
-a:link,
-a:visited {
-  font-weight: bold;
-  color: #ffffff;
-  background-color: #98bf21;
-  text-align: center;
-  padding: 6px;
+
+ul.hand li a {
+  color: white;
   text-decoration: none;
-  text-transform: uppercase;
+  font-size: 18px; /* 字体增大 */
+  transition: color 0.3s;
+  padding: 10px 15px; /* 增加内边距 */
+  border-radius: 5px; /* 圆角 */
 }
-a:hover,
-a:active {
-  background-color: #7a991a;
+
+ul.hand li a:hover {
+  color: #4CAF50; /* 悬停时颜色变化 */
+  background-color: rgba(255, 255, 255, 0.1); /* 悬停时背景半透明白色 */
 }
-/* 以上是导航栏 */
-#farm {
-  font-size: 20px;
+
+/* 首页内容样式 */
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px; /* 避开固定导航栏 */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  width: 80%;
+  max-width: 800px;
+  text-align: center; /* 文本居中 */
 }
+
+.first_r_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.first_r {
+  flex: 1;
+  margin: 0 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px; /* 圆角 */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+/* 自我介绍样式 */
+.self {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  width: 80%;
+  max-width: 800px;
+  text-align: center; /* 文本居中 */
+}
+
+/* 联系表单样式 */
+.contact-form {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  width: 80%;
+  max-width: 800px;
+  text-align: center; /* 文本居中 */
+}
+
+.contact-form h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #87CEEB; /* 标题颜色为天蓝色 */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* 圆角 */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  transition: all 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #87CEEB; /* 聚焦时边框颜色为天蓝色 */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(135, 206, 235, 0.5);
+}
+
+.contact-form button {
+  background-color: #87CEEB; /* 按钮背景为天蓝色 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #66B2E0; /* 悬停时颜色加深 */
+}
+
+/* 结束页样式 */
 .ending {
   text-align: center;
-  background-color: #eee;
-}
-div.first {
-  /* display: flex; */
-  align-self: center;
-  text-align: center;
-  justify-content: center;
-  width: 100%;
-  content: 10px 80px;
-  margin: 0px;
-  background-color: #c4e6fde7;
-}
-/* 人物信息栏（一级） */
-.first_r_1 {
-  height: 25%;
-  width: 100%;
-  margin: 0px;
-  display: flex;
-  border: 1px solid rgba(0, 7, 0, 0.829);
-  background-color: #eee;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9em;
 }
 
-/* 二级 */
-.first_r {
-  height: 100%;
-  width: 100%;
-  margin: 1px;
-  border: 1px solid rgba(0, 7, 0, 0.829);
-  font-size: 26px;
-  background-color: #eee;
-  color: #c4e6fde7;
-}
-/* 下方伪类定义
-是想把他做成一个动画一样的东西，鼠标移动到上面的时候就上移消失 */
-div.first_r:before {
-  display: block;
-  content: "翻牌了解";
-  background-color: rgb(0, 193, 252);
-  color: rgb(0, 0, 0);
-  font-size: 0.82em;
-  /* 动画部分 */
-  height: 100%;
+/* 音乐播放器样式 */
+.music-controls {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #87CEEB; /* 按钮背景为天蓝色 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%; /* 圆形按钮 */
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
 
-div.first_r:hover{
-  position: relative;
-  top: -100px;
-  color: red;
-  background-color: rgb(142, 71, 255);
+.music-controls:hover {
+  background-color: #66B2E0; /* 悬停时颜色加深 */
+  transform: translateY(-5px); /* 悬停时轻微上移 */
 }
 
+.music-controls:active {
+  transform: translateY(0); /* 点击时恢复原位 */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* 点击时阴影变小 */
+}
 
-/* 
-    //flex盒子有几个属性：
-    //主轴（横轴）main axis交叉轴
-    //默认有：
-    //flex-direction:row横向排列
-    //justify-content:center 改变交叉轴位置(控制竖轴)
-    //align-items:start改变主轴位置(控制横轴)
- */
-/* 
- Margin(外边距) - 清除边框外的区域，外边距是透明的。
-Border(边框) - 围绕在内边距和内容外的边框。
-Padding(内边距) - 清除内容周围的区域，内边距是透明的。
-Content(内容) - 盒子的内容，显示文本和图像。*/
+/* 感谢语动画效果 */
+#thank {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #87CEEB; /* 感谢语背景为天蓝色 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px; /* 圆角 */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#thank.visible {
+  opacity: 1;
+}

@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
           musicButton.textContent = '▶'; // 恢复播放图标
           isPlaying = false;
       } else {
-          musicIframe.src = "//music.163.com/outchain/player?type=2&id=2043177987&auto=1&height=66";
+          musicIframe.src = "//music.163.com/outchain/player?type=2&id=2604624069&auto=1&height=66";
           musicButton.textContent = '⏸'; // 暂停图标
           isPlaying = true;
       }

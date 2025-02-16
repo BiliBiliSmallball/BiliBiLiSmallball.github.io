@@ -11,4 +11,12 @@ author:
   name: 圆滚滚的小毛
   email: zzy1535878824@163.com
 
-error404: /404.html
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+404:
+  path: "404.html"

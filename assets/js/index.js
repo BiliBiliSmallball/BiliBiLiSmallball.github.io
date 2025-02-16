@@ -18,29 +18,35 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// 表单提交逻辑
-document.querySelector('form').addEventListener('submit', function (e) {
+// 修改表单提交逻辑
+document.querySelector('form').addEventListener('submit', async function(e) {
   e.preventDefault();
+  
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    message: this.message.value,
+    link_function: [...this.link_function].find(r => r.checked)?.value,
+    _redirect: this._redirect.value,
+    _repo: this._repo.value
+  };
 
-  // 获取表单值
-  const name = document.querySelector('input[name="name"]').value;
-  const email = document.querySelector('input[name="email"]').value;
-  const message = document.querySelector('textarea[name="message"]').value;
-  const contactMethod = Array.from(document.querySelectorAll('input[name="link_function"]:checked')).map(radio => radio.value);
+  try {
+    const response = await fetch('https://api.your-backend.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
 
-  // 验证逻辑
-  if (!name || !email || !message || contactMethod.length === 0) {
-      alert('请填写完整信息。');
-      return;
+    if (response.ok) {
+      window.location.href = formData._redirect;
+    } else {
+      alert('提交失败，请稍后重试');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    alert('网络错误，请检查连接');
   }
-
-  // 提交成功后清空表单并显示感谢语
-  document.getElementById("thank").classList.add('visible');
-  setTimeout(() => {
-      document.getElementById("thank").classList.remove('visible');
-  }, 3000);
-
-  this.reset();
 });
 
 // 跳转朱朱墙

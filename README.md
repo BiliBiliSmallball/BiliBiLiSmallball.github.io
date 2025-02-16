@@ -33,3 +33,11 @@ bilibilismallball.github.io/
 ## 即将上新
 1. 来信功能（待完善）
 2. 自我介绍（待完善）
+
+## 最新项目
+<div class="projects">
+  <div class="project-card">
+    <h3>灵狐论坛</h3>
+    <a href="./index.md">查看详情</a>
+  </div>
+</div>

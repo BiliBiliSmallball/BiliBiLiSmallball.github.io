@@ -1,0 +1,20 @@
+name: New Issue Notification
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Notification
+        uses: actions-hub/gmail@master
+        env:
+          GMAIL_USERNAME: ${{ secrets.GMAIL_USER }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASS }}
+        with:
+          args: |
+            to: zzy1535878824@163.com
+            subject: "新表单提交：${{ github.event.issue.title }}"
+            body: |
+              查看详情：${{ github.event.issue.html_url }}

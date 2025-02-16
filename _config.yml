@@ -1,7 +1,7 @@
 title: 圆滚滚的小毛的个人网站
 description: 这是我的个人博客，记录技术学习和项目经验。
 
-baseurl: "" # 您网站的子路径，例如 /blog
+baseurl: r"hearing\loging.html" # 您网站的子路径，例如 /blog
 
 url: "https://bilibilismallball.github.io"
 theme: minima
@@ -20,3 +20,9 @@ defaults:
 
 404:
   path: "404.html"
+keywords: "编程,前端开发,个人博客,技术学习,圆滚滚的小毛"
+social:
+  - name: GitHub
+    url: https://github.com/BiliBiliSmallball
+  - name: Gitee
+    url: https://gitee.com/soul-fox

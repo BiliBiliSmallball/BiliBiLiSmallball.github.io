@@ -6,16 +6,6 @@ title: 圆滚滚的小毛的个人网站
 <!-- 音乐播放控制 -->
 <div class="music-controls">▶</div>
 
-<!-- 导航栏 -->
-<ul class="hand">
-  <li><a href="./index.html">主页</a></li>
-  <li><a href="https://gitee.com/soul-fox">我的gitee主页</a></li>
-  <li><a href="https://github.com/BiliBiliSmallball">我的github主页</a></li>
-  <li><a href="https://chat.deepseek.com/">A.I.问答</a></li>
-  <li><a href="./docs/hearing/loging.html">我的自建论坛</a></li>
-  <li><a href="WangPang_QiShiYe.html">起始页</a></li>
-</ul>
-
 <!-- 音乐播放器 -->
 <iframe 
   id="music-iframe" 
@@ -72,7 +62,9 @@ title: 圆滚滚的小毛的个人网站
     联系我<br />
     <div id="thank"></div>
   </h4>
-  <form action="https://formspree.io/f/mlezqwgk" method="POST">
+<form action="https://api.your-backend.com/submit" method="POST">
+<input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you">
+<input type="hidden" name="_repo" value="BiliBiliSmallball/your-repo">
     <label>
       <p>您是？</p>
       <input type="text" name="name" placeholder="您的姓名？" required />

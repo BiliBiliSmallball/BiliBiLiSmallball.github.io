@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/new_index.css' | relative_url }}">
+  <title>{{ page.title }} | 圆滚滚的小毛</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.scss' | relative_url }}">
 </head>
 <body>
-  {{ content }}
-  <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
+  {% include navbar.html %}
+
+  <main class="page-content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    // 移动端导航栏切换
+    const toggle = document.querySelector('.navbar-toggle');
+    const menu = document.querySelector('.navbar-menu');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

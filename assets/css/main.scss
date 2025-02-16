@@ -1,0 +1,114 @@
+// 基础样式
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+  }
+  
+  // 导航栏样式
+  .navbar {
+    background: #f8f9fa;
+    padding: 1rem 0;
+  
+    &-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    &-brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+  
+    &-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+  
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #2196F3;
+        }
+      }
+    }
+  
+    &-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+  
+      span {
+        width: 24px;
+        height: 2px;
+        background: #333;
+      }
+    }
+  }
+  
+  // 页脚样式
+  .site-footer {
+    background: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+  
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+  
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+  
+      a {
+        color: #fff;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
+  // 响应式设计
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #f8f9fa;
+      padding: 1rem;
+  
+      &.active {
+        display: flex;
+      }
+    }
+  
+    .navbar-toggle {
+      display: flex;
+    }
+  }

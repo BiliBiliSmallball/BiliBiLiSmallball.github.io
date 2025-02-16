@@ -13,7 +13,7 @@ title: 圆滚滚的小毛的个人网站
   <li><a href="https://github.com/BiliBiliSmallball">我的github主页</a></li>
   <li><a href="https://chat.deepseek.com/">A.I.问答</a></li>
   <li><a href="./docs/hearing/loging.html">我的自建论坛</a></li>
-  <li><a href="./WangPang/QiShiYe.html">起始页</a></li>
+  <li><a href="WangPang_QiShiYe.html">起始页</a></li>
 </ul>
 
 <!-- 音乐播放器 -->

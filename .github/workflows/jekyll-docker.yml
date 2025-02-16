@@ -2,7 +2,7 @@ name: Build and Deploy Jekyll Site
 on:
   push:
     branches:
-      - main  # 替换为你的发布分支
+      - jekyll  # 替换为你的发布分支
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest

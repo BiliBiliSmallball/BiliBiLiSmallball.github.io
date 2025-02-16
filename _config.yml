@@ -1,0 +1,14 @@
+title: 圆滚滚的小毛的个人网站
+description: 这是我的个人博客，记录技术学习和项目经验。
+
+baseurl: "" # 您网站的子路径，例如 /blog
+
+url: "https://bilibilismallball.github.io"
+theme: minima
+github_username: BiliBiliSmallball
+gitee_username: soul-fox
+author:
+  name: 圆滚滚的小毛
+  email: zzy1535878824@163.com
+
+error404: /404.html

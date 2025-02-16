@@ -16,5 +16,5 @@ jobs:
           args: |
             to: zzy1535878824@163.com
             subject: "新表单提交：${{ github.event.issue.title }}"
-            # body: |
-            #   查看详情：${{ github.event.issue.html_url }}
+            body: |
+              查看详情：${{ github.event.issue.html_url }}

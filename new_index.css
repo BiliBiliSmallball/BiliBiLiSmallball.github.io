@@ -1,0 +1,306 @@
+/* 这叫外部样式表，用link引入
+link rel="stylesheet" type="text/css" href="./index_s.css" */
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* 背景颜色 */
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平居中 */
+  justify-content: flex-start; /* 垂直方向从顶部开始 */
+  height: 100vh; /* 占满视口高度 */
+}
+
+/* 导航栏样式 */
+ul.hand {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #87CEEB; /* 天蓝色背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 90%; /* 宽度占满 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  position: fixed; /* 固定在顶部 */
+  top: 0;
+  z-index: 1000; /* 确保在最上层 */
+}
+
+ul.hand li {
+  display: inline;
+  margin: 0 20px; /* 增加间距 */
+}
+
+ul.hand li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* 字体增大 */
+  transition: color 0.3s;
+  padding: 10px 15px; /* 增加内边距 */
+  border-radius: 5px; /* 圆角 */
+}
+
+ul.hand li a:hover {
+  color: #4CAF50; /* 悬停时颜色变化 */
+  background-color: rgba(255, 255, 255, 0.1); /* 悬停时背景半透明白色 */
+}
+
+/* 首页内容样式 */
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px; /* 避开固定导航栏 */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  width: 80%;
+  max-width: 800px;
+  text-align: center; /* 文本居中 */
+}
+
+.first_r_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.first_r {
+  flex: 1;
+  margin: 0 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px; /* 圆角 */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+/* 首页左侧样式 */
+.first img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* 圆形头像 */
+  margin-bottom: 20px; /* 与下方内容的间距 */
+}
+
+/* 首页右侧样式 */
+.first_r_1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* 个人信息样式 */
+.first_r {
+  flex: 1;
+  margin: 0 10px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px; /* 圆角 */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+/* 标题样式 */
+.first h2 {
+  margin-top: 10px;
+  color: #87CEEB; /* 标题颜色为天蓝色 */
+  text-align: center;
+}
+
+/* 欢迎语样式 */
+.first h5 {
+  margin-top: 10px;
+  color: blue; /* 欢迎语颜色为蓝色 */
+  text-align: center;
+}
+
+/* 自我介绍样式 */
+.self {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  width: 80%;
+  max-width: 800px;
+  min-height: 45vh;
+  text-align: center; /* 文本居中 */
+}
+/* 信息容器样式 */
+.info-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* 隐藏信息块样式 */
+.hidden-info {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #f4f4f4; /* 与页面背景色一致 */
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hidden-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.hidden-info:hover::before {
+  opacity: 0;
+}
+
+.hidden-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 信息内容样式 */
+.info-item {
+  position: relative;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.hidden-info:hover .info-item {
+  color: #4CAF50; /* 鼠标悬停时文字颜色变化 */
+}
+
+/* 联系表单样式 */
+.contact-form {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px; /* 圆角 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  width: 80%;
+  max-width: 800px;
+  text-align: center; /* 文本居中 */
+}
+
+.contact-form h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #87CEEB; /* 标题颜色为天蓝色 */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px; /* 圆角 */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  transition: all 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #87CEEB; /* 聚焦时边框颜色为天蓝色 */
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(135, 206, 235, 0.5);
+}
+
+.contact-form button {
+  background-color: #87CEEB; /* 按钮背景为天蓝色 */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px; /* 圆角 */
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #66B2E0; /* 悬停时颜色加深 */
+}
+
+/* 结束页样式 */
+.ending {
+  text-align: center;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9em;
+}
+
+/* 音乐播放器样式 */
+.music-controls {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #87CEEB; /* 按钮背景为天蓝色 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%; /* 圆形按钮 */
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+
+.music-controls:hover {
+  background-color: #66B2E0; /* 悬停时颜色加深 */
+  transform: translateY(-5px); /* 悬停时轻微上移 */
+}
+
+.music-controls:active {
+  transform: translateY(0); /* 点击时恢复原位 */
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); /* 点击时阴影变小 */
+}
+
+/* 感谢语动画效果 */
+#thank {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #87CEEB; /* 感谢语背景为天蓝色 */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px; /* 圆角 */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#thank.visible {
+  opacity: 1;
+}

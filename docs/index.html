@@ -1,118 +1,931 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/BiliBiLiSmallball.github.io/docs/self_photo.jpg"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" type="text/css" href="new_index.css" />
-    <title>圆滚滚的小毛的个人网站</title>
-  </head>
-  <body>
-    <!-- 音乐播放控制按钮 -->
-    <div class="music-controls">▶</div>
-    <!-- 导航栏 -->
-    <ul class="hand">
-      <li><a href="./index(zzy).html">主页</a></li>
-      <li><a href="https://gitee.com/soul-fox">我的gitee主页</a></li>
-      <li><a href="https://github.com/BiliBiliSmallball">我的github主页</a></li>
-      <li><a href="https://chat.deepseek.com/">A.I.问答</a></li>
-      <li><a href="/BiliBiLiSmallball.github.io/docs/hearing/loging.html">我的自建论坛</a></li> <!-- 修正路径 -->
-      <li><a href="/BiliBiLiSmallball.github.io/WangPang/QiShiYe.html">起始页</a></li>
-    </ul>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆滚滚的小毛的个人网站 | 圆滚滚的小毛</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --accent: #f472b6;
+            --accent2: #22d3ee;
+            --bg: #0f0f1a;
+            --bg-card: rgba(255,255,255,0.03);
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: rgba(255,255,255,0.08);
+        }
 
-    <!-- 音乐播放器 -->
-    <iframe 
-      id="music-iframe" 
-      frameborder="no" 
-      style="display: none;" 
-      src="//music.163.com/outchain/player?type=2&id=2043177987&auto=1&height=66"
-    ></iframe>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <!-- 首页内容 -->
-    <div class="first">
-      <div>
-        <h5>我真的不知道偷图,找到我就去找百度。</h5>
-        <img src="./self_photo.jpg" alt="上学记得换！小狐狸！" width="150" height="150">
-        <h2>你好，我是<br/>圆滚滚的小毛<br/>欢迎来到<br/>我的网页</h2>
-      </div>
-    
-      <div class="info-container">
-        <div class="hidden-info" data-title="姓名">
-          <div class="info-item">姓名：圆滚滚的小毛</div>
-        </div>
-        <div class="hidden-info" data-title="性别：男">
-          <div class="info-item">性别：男</div>
-        </div>
-        <div class="hidden-info" data-title="籍贯：福建南平人">
-          <div class="info-item">籍贯：福建南平人</div>
-        </div>
-        <div class="hidden-info" data-title="所在地：厦门（或者广州？）">
-          <div class="info-item">所在地：厦门（或者广州？）</div>
-        </div>
-        <div class="hidden-info" data-title="QQ：1535878824">
-          <div class="info-item">QQ：1535878824</div>
-        </div>
-        <div class="hidden-info" data-title="电话：18059267295">
-          <div class="info-item">电话：18059267295</div>
-        </div>
-        <div class="hidden-info" data-title="邮箱">
-          <div class="info-item">zzy1535878824@163.com</div>
-        </div>
-        <div class="hidden-info" data-title="null">
-          <div class="info-item"><---联系我(ovo)</div>
-        </div>
-      </div>
-        <br />
-      </div>
-    </div>
-    
-    <!-- 时间 -->
-    <iframe src="./test_addess/time.html" style=" position: fixed;top: 20vh;left: 10px;"></iframe>
-    <!-- 自我介绍 -->
-    <iframe class="self" src="Bet_On_Me.html"></iframe>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
 
-    <!-- 联系表单 -->
-    <div class="first" style="background-color: rgb(159, 206, 188);">
-      <h4 style="text-align: center; color: aquamarine;">
-        联系我<br />
-        <div id="thank"></div>
-      </h4>
-      <form action="https://formspree.io/f/mlezqwgk" method="POST">
-        <label>
-          <p>您是？</p>
-          <input type="text" name="name" placeholder="您的姓名？" required />
-        </label>
-        <label>
-          <p>您的邮箱？</p>
-          <input type="email" name="email" required />
-        </label>
-        <label>
-          <p>说啥？</p>
-          <br />
-          <textarea name="message" required style="max-width: 761px; max-height: 62px;width: 100vh;height: 10vh;"></textarea>
-        </label>
-        <label>
-          联系形式:
-          <input type="radio" name="link_function" value="QQ" required />QQ
-          <input type="radio" name="link_function" value="email" />e-mail
-          <input type="radio" name="link_function" value="微信" />微信
-          <input type="radio" name="link_function" value="飞书" />飞书
-        </label>
-        <button type="submit">发送</button>
-      </form>
-    </div>
+        #particles-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
 
-    <!-- 页脚 -->
-    <p class="ending">
-      网站备案号: <del>没有的啦</del><br />
-      E-mail: zzy1535878824@163.com
-    </p>
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(15, 15, 26, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.4s ease;
+        }
+        .navbar.scrolled {
+            padding: 0.6rem 2rem;
+            background: rgba(15, 15, 26, 0.95);
+            box-shadow: 0 4px 30px rgba(99, 102, 241, 0.15);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s infinite;
+        }
+        @keyframes shimmer {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.3); }
+        }
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 12px;
+            z-index: -1;
+        }
+        .nav-links a:hover { color: white; transform: translateY(-2px); }
+        .nav-links a:hover::before { opacity: 1; }
 
-    <!-- 脚本 -->
-    <script src="./index.js"></script>
-  </body>
+        .nav-clock {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--text);
+            transition: all 0.3s ease;
+            margin-left: 0.8rem;
+            flex-shrink: 0;
+        }
+        .nav-clock:hover {
+            background: rgba(99, 102, 241, 0.15);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+        }
+        .nav-clock .clock-icon {
+            font-size: 0.9rem;
+            animation: clockSpin 4s linear infinite;
+        }
+        @keyframes clockSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .nav-clock .time-display {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: var(--accent2);
+        }
+        .nav-clock .date-display {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-left: 0.3rem;
+            border-left: 1px solid var(--border);
+            padding-left: 0.5rem;
+        }
+
+        .main-content {
+            position: relative;
+            z-index: 1;
+            padding-top: 100px;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .hero-clock-container {
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+        .hero-clock {
+            display: flex;
+            align-items: baseline;
+            gap: 0.3rem;
+            font-family: 'JetBrains Mono', monospace;
+            justify-content: center;
+        }
+        .hero-clock .clock-digit {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease infinite;
+            text-shadow: 0 0 60px rgba(99, 102, 241, 0.3);
+        }
+        .hero-clock .clock-separator {
+            font-size: clamp(1.8rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: var(--accent);
+            animation: blink 1s infinite;
+            line-height: 1;
+            margin: 0 0.1rem;
+        }
+        .hero-clock .clock-seconds {
+            font-size: clamp(1rem, 2.5vw, 1.8rem);
+            font-weight: 700;
+            color: var(--accent2);
+            margin-left: 0.2rem;
+            align-self: flex-end;
+            margin-bottom: 0.4rem;
+            min-width: 2.2ch;
+        }
+        .hero-clock .clock-ampm {
+            font-size: clamp(0.7rem, 1.5vw, 1rem);
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-left: 0.4rem;
+            align-self: flex-end;
+            margin-bottom: 0.6rem;
+        }
+        .hero-clock-date {
+            margin-top: 0.6rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .hero-clock-date .weekday {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            color: var(--accent2);
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease;
+        }
+        .hero-badge .pulse {
+            width: 8px; height: 8px;
+            background: var(--accent2);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.5); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        .typewriter {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            min-height: 2rem;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        .typewriter .cursor {
+            display: inline-block;
+            width: 2px; height: 1.2em;
+            background: var(--accent);
+            margin-left: 2px;
+            animation: blink 1s infinite;
+            vertical-align: text-bottom;
+        }
+
+        .play-btn {
+            margin-top: 2.5rem;
+            width: 70px; height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+            animation: fadeInUp 0.8s ease 0.6s both, float 3s ease-in-out infinite;
+            transition: all 0.3s ease;
+        }
+        .play-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 60px rgba(99, 102, 241, 0.6);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px; left: 50%;
+            transform: translateX(-50%);
+            width: 60px; height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(99,102,241,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .info-card:hover::before { opacity: 1; }
+        .info-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+        .info-item:hover {
+            background: rgba(99, 102, 241, 0.08);
+            border-color: rgba(99, 102, 241, 0.2);
+            transform: translateX(5px);
+        }
+        .info-icon {
+            width: 44px; height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .info-icon.purple { background: rgba(99, 102, 241, 0.15); }
+        .info-icon.pink { background: rgba(244, 114, 182, 0.15); }
+        .info-icon.cyan { background: rgba(34, 211, 238, 0.15); }
+        .info-icon.orange { background: rgba(251, 146, 60, 0.15); }
+        .info-text .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+        .info-text .value {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .contact-section {
+            background: linear-gradient(180deg, transparent, rgba(99,102,241,0.03), transparent);
+        }
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2.5rem;
+            backdrop-filter: blur(10px);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-card::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(244,114,182,0.1), transparent);
+            pointer-events: none;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.2rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+        }
+        .contact-types {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        .contact-type {
+            padding: 0.6rem 1.2rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .contact-type:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(99, 102, 241, 0.08);
+        }
+        .contact-type.active {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            border-radius: 14px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        .submit-btn:hover::before { left: 100%; }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+            position: relative;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transition: width 0.3s;
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-links a:hover::after { width: 100%; }
+        .footer-email {
+            color: var(--accent2);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        .footer-copy del {
+            color: var(--accent);
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+        .glow-orb-1 {
+            width: 400px; height: 400px;
+            background: var(--primary);
+            top: -100px; right: -100px;
+            animation: orbFloat1 20s ease-in-out infinite;
+        }
+        .glow-orb-2 {
+            width: 300px; height: 300px;
+            background: var(--accent);
+            bottom: 20%; left: -100px;
+            animation: orbFloat2 25s ease-in-out infinite;
+        }
+        @keyframes orbFloat1 {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(-50px, 30px); }
+            66% { transform: translate(30px, -20px); }
+        }
+        @keyframes orbFloat2 {
+            0%, 100% { transform: translate(0, 0); }
+            33% { transform: translate(40px, -30px); }
+            66% { transform: translate(-20px, 20px); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { gap: 0.3rem; }
+            .nav-links a { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+            .nav-clock { display: none; }
+            .hero h1 { font-size: 1.8rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .hero-clock .clock-ampm,
+            .hero-clock .clock-seconds { display: none; }
+        }
+
+        .funny-note {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+        .contact-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <canvas id="particles-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">圆滚滚的小毛</div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <ul class="nav-links">
+                    <li><a href="#home">🏠 主页</a></li>
+                    <li><a href="https://gitee.com" target="_blank">🐎 Gitee</a></li>
+                    <li><a href="https://github.com/BiliBiliSmallball" target="_blank">我的github主页</a></li>
+                    <li><a href="#ai">A.I.问答</a></li>
+                    <li><a href="#forum">💬 论坛</a></li>
+                    <li><a href="#start">起始页</a></li>
+                </ul>
+                <div class="nav-clock" id="navClock">
+                    <span class="clock-icon">⏱</span>
+                    <span class="time-display" id="navTime">00:00:00</span>
+                    <span class="date-display" id="navDate">1月1日</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero" id="home">
+            <div class="hero-clock-container">
+                <div class="hero-clock">
+                    <span class="clock-digit" id="heroHour">00</span>
+                    <span class="clock-separator">:</span>
+                    <span class="clock-digit" id="heroMinute">00</span>
+                    <span class="clock-seconds" id="heroSecond">00</span>
+                    <span class="clock-ampm" id="heroAmpm">AM</span>
+                </div>
+                <div class="hero-clock-date">
+                    <span id="heroYear">2026</span>年<span id="heroMonth">1</span>月<span id="heroDay">1</span>日
+                    <span class="weekday" id="heroWeekday">星期一</span>
+                </div>
+            </div>
+
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                圆滚滚的小毛的个人网站
+            </div>
+            <h1>
+                你好，我是 <span class="highlight">圆滚滚的小毛</span><br>
+                欢迎来到 <span class="highlight">我的网页</span>
+            </h1>
+            <div class="typewriter" id="typewriter">
+                <span id="type-text"></span><span class="cursor"></span>
+            </div>
+            <button class="play-btn" id="playBtn" title="播放">▶</button>
+        </section>
+
+        <section class="section reveal">
+            <h2 class="section-title">个人信息</h2>
+            <p class="funny-note">我真的不知道偷图,找到我就去找百度。</p>
+            <div class="info-card">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-icon purple">👤</div>
+                        <div class="info-text">
+                            <div class="label">姓名</div>
+                            <div class="value">圆滚滚的小毛</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon pink">♂</div>
+                        <div class="info-text">
+                            <div class="label">性别</div>
+                            <div class="value">男</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon cyan">📍</div>
+                        <div class="info-text">
+                            <div class="label">籍贯</div>
+                            <div class="value">福建南平人</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon orange">🏙️</div>
+                        <div class="info-text">
+                            <div class="label">所在地</div>
+                            <div class="value">厦门（或者广州？）</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon purple">💬</div>
+                        <div class="info-text">
+                            <div class="label">QQ</div>
+                            <div class="value">1535878824</div>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon pink">📞</div>
+                        <div class="info-text">
+                            <div class="label">电话</div>
+                            <div class="value">18059267295</div>
+                        </div>
+                    </div>
+                    <div class="info-item" style="grid-column: 1 / -1;">
+                        <div class="info-icon cyan">✉️</div>
+                        <div class="info-text">
+                            <div class="label">邮箱</div>
+                            <div class="value">zzy1535878824@163.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section reveal">
+            <h2 class="section-title">联系我</h2>
+            <p class="contact-label">&lt;---联系我(ovo)</p>
+            <div class="contact-card">
+                <div class="form-group">
+                    <label>您是？</label>
+                    <input type="text" placeholder="请输入您的称呼">
+                </div>
+                <div class="form-group">
+                    <label>您的邮箱？</label>
+                    <input type="email" placeholder="请输入您的邮箱">
+                </div>
+                <div class="form-group">
+                    <label>说啥？</label>
+                    <textarea rows="4" placeholder="想对我说点什么..."></textarea>
+                </div>
+                <div style="margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">联系形式:</div>
+                <div class="contact-types">
+                    <div class="contact-type active">QQ</div>
+                    <div class="contact-type">e-mail</div>
+                    <div class="contact-type">微信</div>
+                    <div class="contact-type">飞书</div>
+                </div>
+                <button class="submit-btn">发送消息</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#privacy">隐私政策</a>
+            <a href="#terms">服务条款</a>
+            <a href="#contact">联系我</a>
+        </div>
+        <div class="footer-copy">网站备案号: <del>没有的啦</del></div>
+        <div class="footer-email">E-mail: zzy1535878824@163.com</div>
+        <div class="footer-copy">© 2023 圆滚滚的小毛. 保留所有权利.</div>
+    </footer>
+
+    <script>
+        const weekdays = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        function pad(n) { return n < 10 ? '0' + n : n; }
+
+        function updateClock() {
+            const now = new Date();
+            const h = now.getHours();
+            const m = now.getMinutes();
+            const s = now.getSeconds();
+            const ampm = h >= 12 ? 'PM' : 'AM';
+            const h12 = h % 12 || 12;
+
+            document.getElementById('navTime').textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+            document.getElementById('navDate').textContent = (now.getMonth() + 1) + '月' + now.getDate() + '日';
+
+            document.getElementById('heroHour').textContent = pad(h12);
+            document.getElementById('heroMinute').textContent = pad(m);
+            document.getElementById('heroSecond').textContent = pad(s);
+            document.getElementById('heroAmpm').textContent = ampm;
+            document.getElementById('heroYear').textContent = now.getFullYear();
+            document.getElementById('heroMonth').textContent = now.getMonth() + 1;
+            document.getElementById('heroDay').textContent = now.getDate();
+            document.getElementById('heroWeekday').textContent = weekdays[now.getDay()];
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const canvas = document.getElementById('particles-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.5;
+                this.speedY = (Math.random() - 0.5) * 0.5;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+                if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+            }
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(147, 197, 253, ' + this.opacity + ')';
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 80; i++) particles.push(new Particle());
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 150) {
+                        ctx.beginPath();
+                        ctx.strokeStyle = 'rgba(147, 197, 253, ' + (0.1 * (1 - dist / 150)) + ')';
+                        ctx.lineWidth = 0.5;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            requestAnimationFrame(animateParticles);
+        }
+        animateParticles();
+
+        const texts = ['福建南平人', '在厦门（或者广州？）', '喜欢编程和探索', '欢迎来找我玩~'];
+        let textIndex = 0, charIndex = 0, isDeleting = false;
+        const typeText = document.getElementById('type-text');
+
+        function typeWriter() {
+            const current = texts[textIndex];
+            if (isDeleting) {
+                typeText.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typeText.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            let speed = isDeleting ? 50 : 100;
+            if (!isDeleting && charIndex === current.length) {
+                speed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                speed = 500;
+            }
+            setTimeout(typeWriter, speed);
+        }
+        typeWriter();
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => revealObserver.observe(el));
+
+        document.querySelectorAll('.contact-type').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.contact-type').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        document.getElementById('playBtn').addEventListener('click', function() {
+            this.style.transform = 'scale(0.9)';
+            setTimeout(() => { this.style.transform = ''; }, 150);
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
 </html>

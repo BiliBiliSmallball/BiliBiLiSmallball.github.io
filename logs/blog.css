@@ -161,3 +161,19 @@ body {
         border-radius: 12px;
     }
 }
+
+.post-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+  .post-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0366d6;
+  }
+  .post-date {
+    font-size: 0.8rem;
+    color: #666;
+  }

@@ -42,37 +42,32 @@ function escapeHtml(str) {
     });
 }
 
-// ======================= 加载文章列表（仅依赖 index.json） =======================
+// ======================= 加载文章列表 =======================
 async function loadPosts() {
     const postList = document.getElementById('postList');
     if (!postList) return;
 
     try {
-        // 请求静态索引文件
         const response = await fetch('log_film/index.json');
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}：索引文件不存在或无法访问`);
         }
         const data = await response.json();
 
-        // 检查数据结构
         if (!data.posts || !Array.isArray(data.posts) || data.posts.length === 0) {
             postList.innerHTML = '<div class="loading">暂无文章，请在 log_film/index.json 中添加 posts 数组</div>';
             return;
         }
 
-        // 可直接使用 JSON 中的数据，也可以增强（例如自动补全缺失字段）
         const posts = data.posts.map(post => ({
             title: post.title || '无标题',
             date: post.date || '',
             tag: post.tag || '随笔',
             excerpt: post.excerpt || '',
             filename: post.filename || ''
-        })).filter(post => post.filename); // 过滤掉没有文件名的条目
+        })).filter(post => post.filename);
 
-        // 按日期倒序排列（如果 date 格式为 YYYY-MM-DD 则可以直接字符串比较）
         posts.sort((a, b) => (b.date || '').localeCompare(a.date || ''));
-
         renderPosts(posts);
     } catch (error) {
         console.error('加载失败:', error);
@@ -83,5 +78,4 @@ async function loadPosts() {
     }
 }
 
-// 页面启动
 loadPosts();
